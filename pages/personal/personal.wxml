@@ -1,0 +1,26 @@
+<view class='container'>
+<view id="header">
+    <view class = "user-info" style = "background-image: url({{skin}});">
+    	<!-- 改变背景 -->
+    	<view class = "user-skin" bindtap ="viewSkin"></view>
+       <view class="content">
+    <!--返回用户头像  -->
+    	  <image src="{{userInfo.avatarUrl}}"></image>
+      <!-- 返回用户名字  -->
+          <view class="nickname">{{userInfo.nickName}}
+          <block wx:if ="{{userInfo.gender == 1}}">
+          	  <view class = "user-sex-male"></view>
+          </block> 
+          <block wx:elif = "{{userInfo.gender == 2}}">
+          	   <view class = "user-sex-female"></view>
+          </block>
+          </view>  
+        <!--返回用户所在地区  -->
+         <view class="orther">{{userInfo.province}},{{userInfo.city}}</view> 
+         </view>
+        </view> 
+</view>
+
+</view>
+
+
